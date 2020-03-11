@@ -48,7 +48,6 @@ Folks, if you want to enable debugging with VSCode then you need to create `laun
 After adding these tasks, you need to run first debug task and then launch chrome task.
 
 ### Troubleshooting - 
-Error-1:
 
 Please run following command if you will see below error message 
 `npm install babel-plugin-angularjs-annotate --save-dev`
@@ -61,6 +60,3 @@ Module build failed (from ./node_modules/babel-loader/lib/index.js):
 ReferenceError: Unknown plugin "angularjs-annotate" specified in "/home/ec2-user/neo4j_demo/neo4j_api/.babelrc" at 1, attempted to resolve relative to "/home/ec2-user/neo4j_demo/neo4j_api"
 
 ```
-
-Error-2:
-
