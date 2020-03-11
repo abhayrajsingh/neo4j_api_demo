@@ -1,7 +1,7 @@
 # Neo4j API Demo
 
-# Client - Frontend to Add & Select all employee list
-This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4`starter kit.
+# Client - Simple UI to add & select the employees list
+This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4` component for this UI development.
 
 ### Prerequisites
 Node >= 6.x.x  node <= 8.x.x, Yarn
@@ -13,7 +13,7 @@ Node >= 6.x.x  node <= 8.x.x, Yarn
 
 For building project use `yarn build`
 
-Server Side - Frontend to Add a employee
+# Server Side - APIs for add an employee and get the list
 
 ### Steps to run Server program that hosting APIs
 1. Using interactive mode `node index.js`
