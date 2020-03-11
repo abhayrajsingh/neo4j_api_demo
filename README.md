@@ -1,6 +1,6 @@
 # Neo4j API Demo
 
-# Client - Frontend to Add a employee
+# Client - Frontend to Add & Select all employee list
 This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4`starter kit.
 
 ### Prerequisites
@@ -18,7 +18,7 @@ Server Side - Frontend to Add a employee
 ### Steps to run project
 1. Using interactive mode `node index.js`
 or
-2. In background `forever -al smbsurvey.log start index.js`
+2. In background `forever -al neo4j_api_logs.log start index.js`
 
 
 ### Enable Debug with VS Code
