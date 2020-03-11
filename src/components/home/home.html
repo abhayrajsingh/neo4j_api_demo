@@ -1,0 +1,142 @@
+<style type="text/css" >
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.form {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #112f65;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.resetbtn {
+  background-color: #8e968e;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#topDiv {
+    overflow: auto;
+    padding: 10px;
+		float: right;
+}
+
+#left {
+	padding: 16px;
+    float: left;
+    width: 200px;
+	  text-align: center;
+}
+
+#right {
+	padding: 16px;
+    margin-left: 200px;
+		  width: 200px;
+}
+
+#showMessage{
+  text-align: center;
+    background: #056b29;
+    color: white;
+}
+
+#showError{
+  text-align: center;
+    background: red;
+    color: white;
+}
+</style>
+
+<div class="container" >
+		<h1><i class="fa fa-user"></i>&nbsp;{{$ctrl.heading}}</h1>
+		<hr>
+	<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="form">
+	    <p>Please fill in this form to add an employee.</p>
+	    <hr>
+
+	    <label for="name"><b>Name</b></label>
+	    <input type="text" ng-change="$ctrl.resetError()" ng-model="$ctrl.empName" placeholder="Employee name" id="employeeName" name="name" required> </input>
+
+	    <label for="employeeid"><b>Employee ID</b></label>
+	    <input type="text" ng-change="$ctrl.resetError()"  ng-model="$ctrl.empID"  placeholder="Employee ID" name="employeeID" id="employeeID" required>  </input>
+      <hr>
+      <div id="showMessage" ng-if="$ctrl.showMessage">
+        <p>{{$ctrl.message}}</p>
+      </div>
+
+      <div id="showError" ng-if="$ctrl.showError">
+        <p>{{$ctrl.errorMessage}}</p>
+      </div>
+
+			<div id="topDiv">
+        
+					<div id="left">
+						<button type="reset" ng-click="$ctrl.resetEmployee()" class="resetbtn">Reset</button>
+
+			    </div>
+			    <div id="right">
+			      <button type="submit" ng-click="$ctrl.addEmployee()" class="registerbtn">Submit</button>
+			    </div>
+			</div>
+
+	  </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+	<h1><i class="fa fa-users"></i>&nbsp;Employee list</h1>
+			<hr>
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+			<th>Employee ID</th>
+			<th>Employee Name</th>
+
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in $ctrl.users">
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,82 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a simple user management API"
+  version: "1.0.0"
+  title: "User Management API"
+  contact:
+    email: "abhay_rajsingh@hotmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/neo4j/v1"
+tags:
+- name: "Create an employee"
+  description: "Create employee using name and employee id"
+- name: "Get all employees"
+  description: "Get the all employees list"
+schemes:
+- "http"
+paths:
+  /employee:
+    get:
+      tags:
+      - "Get all employees"
+      summary: "Get the all employees list"
+      description: "Get the all employees list from Neo4J \n"
+      operationId: "getEmployees"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "employees list"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Employee"
+        "400":
+          description: "bad input parameter"
+      x-swagger-router-controller: "GetAllEmployees"
+    post:
+      tags:
+      - "Create an employee"
+      summary: "adds an new employee"
+      description: "Adds an employee to the system"
+      operationId: "addEmployee"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "addEmployees"
+        description: "Employee info to add"
+        required: false
+        schema:
+          $ref: "#/definitions/Employee"
+      responses:
+        "201":
+          description: "employee has been added successfully"
+        "400":
+          description: "invalid input, object invalid"
+        "409":
+          description: "an existing employee already exists"
+      x-swagger-router-controller: "CreateAnEmployee"
+definitions:
+  Employee:
+    type: "object"
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+        example: 1010
+      name:
+        type: "string"
+        example: "Abhay Raj"
+    example:
+      name: "Abhay Raj"
+      id: 1010
