@@ -15,7 +15,7 @@ For building project use `yarn build`
 
 Server Side - Frontend to Add a employee
 
-### Steps to run project
+### Steps to run Server program that hosting APIs
 1. Using interactive mode `node index.js`
 or
 2. In background `forever -al neo4j_api_logs.log start index.js`
