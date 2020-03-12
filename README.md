@@ -14,6 +14,8 @@ Node >= 6.x.x  node <= 8.x.x, Yarn
 2. Do `yarn install` to install all dependencies.
 3. Finally `yarn start` to run project.
 
+App will open in web-browse on port 3000 with <localhost> i.e. http://localhost:3000
+
 For building project use `yarn build`
 
 # Server Side - APIs for add an employee and get the list
@@ -23,6 +25,8 @@ For building project use `yarn build`
 or
 2. In background `forever -al neo4j_api_logs.log start index.js`
 
+Your server is listening on port 8080 (http://localhost:8080)
+API's information is available on http://localhost:8080/docs
 
 ### Enable Debug with VS Code
 Folks, if you want to enable debugging with VSCode then you need to create `launch.json` file and add below two tasks in that file.
