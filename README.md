@@ -54,11 +54,14 @@ Folks, if you want to enable debugging with VSCode then you need to create `laun
 
 After adding these tasks, you need to run first debug task and then launch chrome task.
 
-### Troubleshooting - 
+### Troubleshooting
 
 Please run following command if you will see below error message 
+
 `npm install babel-plugin-angularjs-annotate --save-dev`
+
 `yarn install`
+
 `yarn start`
 
 ```
