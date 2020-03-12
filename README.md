@@ -1,5 +1,8 @@
 # Neo4j API Demo
 
+# Step by step - Video installation
+`https://1drv.ms/v/s!AjDk9E2LjU-_gSt7kWpUgr6yhj1L`
+
 # Client - Simple UI to add & select the employees list
 This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4` component for this UI development.
 
